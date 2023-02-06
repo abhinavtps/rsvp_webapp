@@ -14,17 +14,27 @@
   </head>
   <body>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto"></header>
+      <header class="mb-auto">
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a href="#" class="nav-link active" aria-current="page">Home</a>
+          <% if(!currentUser) { %>
+          <a href="/login" class="nav-link">Login</a>
+          <a href="/register" class="nav-link">Register</a>
+          <% } else { %>
+          <a href="/logout" class="nav-link">Logout</a>
+          <% } %>
+        </nav>
+      </header>
       <main class="px-3">
         <h1>RSVP</h1>
         <p class="lead">
           Welcome to RSVP!!<br />
           Organise a event with us, without any worry!!
         </p>
-        <a href="/user" class="btn-primary btn btn-lg font-weight-bold"
+        <a href="#" class="btn-primary btn btn-lg font-weight-bold"
           >Event Organizer</a
         >
-        <a href="/guest" class="btn-success btn btn-lg font-weight-bold"
+        <a href="#" class="btn-success btn btn-lg font-weight-bold"
           >Guest To Event</a
         >
       </main>
